@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --starship: #f3db4c;
+  --mine_shaft: #343434;
+  --husk: #b2a443;
+  --sycamore: #94843c;
+  --white: #fff;
+  --max-widt: 1400px;
+  --padding: 8px;
+  --margin: 10px;
+  --border-radius: 8px;
+  --transition: 1s;
+  --font-size: 16px;
+}
+
+::selection {
+  background: var(--starship);
+  color: var(--white);
+}
+
+body {
+  background-color: var(--mine_shaft);
+  color: var(--white);
+  font-size: var(--font-zise);
+  font-family: "Raleway", sans-serif;
+  line-height: 24px;
+}
+
+header {
+  text-align: center;
+  background-color: var(--mine_shaft);
+  color: var(--starship);
+  border-bottom: solid 1px var(--starship);
+  padding: var(--padding);
+  margin-bottom: var(--margin);
+}
+
+section {
+  padding: var(--padding);
+}
+
+a {
+  color: var(--starship);
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  padding: var(--padding);
+}
+
+p {
+  font-size: 1rem;
+  margin: 0 0 var(--margin);
+  color: var(--white);
+}
+
+p::first-letter {
+  font-size: 1.4rem;
+  color: var(--starship);
+  font-weight: bold;
+}
+ul {
+  list-style: none;
+}
+ul.list > li.item {
+  cursor: pointer;
+}
+li.item:hover a {
+  color: var(--mine_shaft);
+}
+
+.container {
+  max-width: var(--max-widt);
+  margin: 0 auto;
+  padding: 0 var(--padding);
+}
+
+.card {
+  width: 450px;
+  border: solid 1px var(--husk);
+  border-radius: var(--border-radius);
+  margin: 0 auto;
+}
+
+.card__header {
+  padding: var(--padding);
+}
+
+.card__title {
+  text-wrap: wrap;
+  word-break: break-all; /* esto es para romper las lineas  */
+}
+
+.card__body {
+  padding: var(--padding);
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__paragraph {
+  padding: var(--padding);
+}
+
+.button {
+  padding: var(--padding);
+  background-color: var(--starship);
+  color: var(--mine_shaft);
+  border-radius: var(--border-radius);
+  border: solid 0.5px var(--starship);
+  transition: var(--transition);
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button__text {
+}
+
+.button__icon {
+  font-size: 1.4rem;
+}
+
+.button--outline {
+  background-color: var(--mine_shaft);
+  color: var(--starship);
+}
+
+.button:hover {
+  background-color: var(--mine_shaft);
+  color: var(--starship);
+}
+
+.button--outline:hover {
+  background-color: var(--starship);
+  color: var(--mine_shaft);
+}
+
+.item {
+  text-align: center;
+  padding: var(--padding);
+}
+
+.list__item {
+  border-bottom: solid 1px var(--sycamore);
+  padding: var(--padding);
+}
