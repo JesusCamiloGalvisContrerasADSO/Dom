@@ -45,7 +45,7 @@ section {
   padding: var(--padding);
 }
 
-a {
+a, .list__item {
   color: var(--starship);
   text-decoration: none;
 }
@@ -69,7 +69,7 @@ p::first-letter {
 ul {
   list-style: none;
 }
-ul.list > li.item {
+.list__item{
   cursor: pointer;
 }
 li.item:hover a {
@@ -80,6 +80,42 @@ li.item:hover a {
   max-width: var(--max-widt);
   margin: 0 auto;
   padding: 0 var(--padding);
+}
+
+/*Formulario de busqueda*/
+.search{
+  display: flex;
+  justify-content: end;
+  
+}
+
+.search__form{
+  border: solid 1px var(--starship);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--margin);
+  padding: var(--padding);
+
+  display:inline-grid;
+  justify-content: end;
+  grid-template-columns: auto 40px;
+  gap: 4px;
+  /* grid-template-columns: repeat(auto, 1fr); */
+}
+
+.input{
+  width: 100%;
+  padding: var(--padding);
+  outline: none;
+  border: solid 1px var(--starship);
+  font-size: 1rem;
+  color: var(--mine_shaft);
+  
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
 }
 
 .card {
@@ -94,7 +130,7 @@ li.item:hover a {
 }
 
 .card__title {
-  text-wrap: wrap;
+  text-wrap: wrap; /* nos permite balancear los títulos y textos automáticamente.*/
   word-break: break-all; /* esto es para romper las lineas  */
 }
 
@@ -121,6 +157,11 @@ li.item:hover a {
   font-weight: 700;
   display: inline-flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.button--icon{
+  justify-content: center;
   align-items: center;
 }
 
@@ -154,4 +195,20 @@ li.item:hover a {
 .list__item {
   border-bottom: solid 1px var(--sycamore);
   padding: var(--padding);
+  text-align: center;
+  transition: var(--transition);
+  font-size: 1.2rem;
+}
+
+.list__item:hover{
+  background-color: var(--husk);
+  color: var(--mine_shaft);
+}
+
+ul.list > li.list__item:last-child{
+  border-bottom: none;
+}
+
+div.card>ul.list>li.list__item>a:visited{
+  color: var(--sycamore);
 }
